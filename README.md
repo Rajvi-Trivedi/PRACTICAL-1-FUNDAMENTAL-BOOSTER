@@ -1,97 +1,118 @@
-**Fundamental Booster Overview Of Fundamental Booster (excel project)**
+# Fundamental Booster – Core Excel Functions & Data Analysis
 
-This project demonstrates the use of essential Excel functions related to data analysis, referencing, lookup operations, logical formulas, date functions, text manipulation, and dynamic ranges. The project is divided into three datasets:
+## Project Overview
 
-**Students Grade Sheet**
+Fundamental Booster is an Excel-based project designed to demonstrate strong foundational skills in data analysis, logical functions, lookup operations, dynamic referencing, and data manipulation.
 
-**Sales Data Sheet**
+The project is structured across three datasets to apply Excel functions in practical business scenarios.
 
-**Employee Data Sheet**
+---
 
-Each sheet includes tasks aligned with the required topics and functions.
+## Datasets Included
 
-Contents and Tasks Completed
+* **Students Grade Sheet** – Academic performance evaluation
+* **Sales Data Sheet** – Product sales and discount analysis
+* **Employee Data Sheet** – Salary and service-based analysis
 
-Relative & Absolute References
-Used relative references (A1) in calculations.
+Each dataset applies relevant Excel functions aligned with analytical use cases.
 
-Used absolute references ($A$1) for fixed values such as grade cutoffs and discount thresholds.
+---
 
-IF Formulas and Nested IFs Student Grades:
-Classified grades based on total marks using nested IF.
+## Key Concepts & Functions Implemented
 
-Example: =IF(F2>=90,"A",IF(F2>=80,"B",IF(F2>=70,"C","D")))
+### 1. Relative & Absolute Referencing
 
-**Sales Discounts:**
+* Used relative references (A1) for dynamic calculations
+* Used absolute references ($A$1) for fixed thresholds such as grade cutoffs and discount rates
 
-Calculated discount based on amount thresholds.
+---
 
-Example: =IF(E2>30000, E20.10, E20.05)
+### 2. Logical Functions (IF, Nested IF, AND, OR)
 
-IF with AND/OR Students:
-Identified students scoring above 80 in both Math and Science. =IF(AND(C2>80, D2>80), "Yes", "No")
+**Student Grade Classification**
 
-**Sales:**
+* Used nested IF to assign grades based on total marks
 
-Discount eligibility using OR. =IF(OR(B2="Laptop", E2>20000), "Eligible", "Not Eligible")
+**Sales Discount Calculation**
 
-COUNTIFS, SUMIFS, AVERAGEIFS Students:
-Counted number of students scoring above 50 in Math. =COUNTIFS(C2:C100, ">50")
+* Applied conditional logic to determine discount rates
 
-**Sales:**
+**AND / OR Conditions**
 
-Summed sales for a specific region and product. =SUMIFS(E2:E100, C2:C100, "East", B2:B100, "Keyboard")
+* Identified students meeting multiple criteria
+* Evaluated discount eligibility based on product or sales threshold
 
-**Students:**
+---
 
-Calculated average score above 60. =AVERAGEIFS(F2:F100, F2:F100, ">60")
+### 3. Conditional Aggregation
 
-Lookup Functions (VLOOKUP, XLOOKUP, XMATCH) Student Name Lookup:
-Retrieved student name from ID. =VLOOKUP(A10, 'Students Grade'!A2:I21, 2, FALSE)
+* `COUNTIFS` – Counted students scoring above a defined threshold
+* `SUMIFS` – Summed sales by region and product
+* `AVERAGEIFS` – Calculated average scores under specific conditions
 
-**Product Price Lookup (Sales Data):**
+---
 
-Fetched product price by product code. =VLOOKUP(H2, A2:E21, 5, FALSE)
+### 4. Lookup & Reference Functions
 
-**XLOOKUP – Employee Salary:**
+* `VLOOKUP` – Retrieved student names and product prices
+* `XLOOKUP` – Returned employee salary by ID
+* `XMATCH` – Identified product position in dataset
+* `INDEX + MATCH` – Extracted sales data based on multiple criteria
 
-Returned salary based on employee ID. =XLOOKUP(G2, A2:A100, D2:D100, "Not Found")
+---
 
-**XMATCH – Product Position:**
+### 5. Text Functions
 
-Found the position of a product in the list. =XMATCH("Laptop", B2:B21)
+* `LEFT`, `FIND` – Extracted first names
+* `UPPER`, `LOWER` – Standardized text formatting
 
-INDEX and MATCH Salesperson Monthly Sales:
-Extracted sales based on salesperson and month. =INDEX(E2:E100, MATCH(1, (D2:D100=H2)*(G2:G100=I2), 0))
+---
 
-TEXT Functions
-Extracted first name: =LEFT(B2, FIND(" ", B2)-1)
+### 6. Dynamic Referencing
 
-Converted to uppercase and lowercase using UPPER() and LOWER().
+* `INDIRECT` – Referenced user-selected ranges dynamically
+* `OFFSET` – Created dynamic salary ranges for trend analysis
 
-INDIRECT and OFFSET Dynamic Range using INDIRECT:
-Referenced a user-selected sheet or range dynamically.
+---
 
-**OFFSET – Dynamic Salary Range:**
+### 7. Date & Time Functions
 
-Created dynamic range for salary trend analysis. =OFFSET(D2, 0, 0, COUNTA(D:D)-1, 1)
+* `DATEDIF` – Calculated years of service and date differences
+* `TODAY()` – Used for real-time calculations
 
-Date & Time Functions Years of Service:
-Calculated years of service while handling future dates. =IF(E2>TODAY(),"Not Available",DATEDIF(E2, TODAY(), "Y"))
+---
 
-**Difference in Days:**
+### 8. Mathematical Functions
 
-Found duration between two dates. =DATEDIF(E2, TODAY(), "D")
+* `ROUND` – Rounded salary figures
+* `CEILING` / `FLOOR` – Applied upward and downward rounding logic
 
-**Math Functions**
-Rounded salary using: =ROUND(D2, -3)
+---
 
-Used CEILING and FLOOR for rounding up or down: =CEILING(D2, 1000) =FLOOR(D2, 1000)
+### 9. FILTER Function
 
-**FILTER Function**
-Extracted all students scoring above 80%. =FILTER(A2:I100, F2:F100>80, "No students above 80")
+* Extracted records dynamically based on performance criteria
 
-**Summary**
+---
 
-**This project covers all essential Excel analytical techniques including logical formulas, lookup operations, text and date functions, dynamic referencing, and filtering. All required tasks under the “Fundamental Booster” assignment have been completed and demonstrated in the respective worksheets.**
+## Key Outcomes
 
+* Practical implementation of core Excel analytical functions
+* Structured application of logical and lookup operations
+* Dynamic data handling using advanced referencing techniques
+* Strong foundation for advanced Excel analytics and dashboard development
+
+---
+
+## Conclusion
+
+This project demonstrates comprehensive understanding of essential Excel functions and their application in structured analytical scenarios. It builds a strong foundation for advanced data modeling, reporting, and business analysis tasks.
+
+---
+
+## Author
+
+Rajvi Trivedi
+Data Analyst | Business Analyst
+
+---
